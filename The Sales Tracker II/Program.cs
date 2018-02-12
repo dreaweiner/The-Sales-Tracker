@@ -10,6 +10,14 @@ namespace The_Sales_Tracker
     {
         static void Main(string[] args)
         {
+            //
+            // seed data file
+            //
+            InitializeDataFileCsv dataInitializerCsv = new InitializeDataFileCsv();
+            dataInitializerCsv.SeedDataFile();
+            InitializeDataFileXml dataInitializerXml = new InitializeDataFileXml();
+            dataInitializerXml.SeedDataFile();
+
             Controller appController = new Controller();
         }
     }
